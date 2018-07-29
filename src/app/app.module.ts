@@ -1,3 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
+import { CaptchaService } from './service/captcha.service';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CaptchaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
