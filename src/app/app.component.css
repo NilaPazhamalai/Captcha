@@ -1,9 +1,17 @@
+.captchaBlock, .captchaBlockMath{
+    height: 300px !important;
+    width: 250px !important;
+    border: 1px solid black;
+}
 #captchaDiv{
     height: 50px !important;
-    width: 150px !important;
+    width: 250px !important; 
     font-weight: bolder;
     font-size: 40px;
+}
 
+input {
+    padding-left: 2px;
 }
 
 .simple{

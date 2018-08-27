@@ -10,6 +10,11 @@ export class AppComponent implements OnInit {
   title = 'CAPTCHA';
   captcha: string;
   captchaID: string;
+  success = false;
+  show = false;
+
+  num1: number;
+  num2: number;
 
   constructor(private captchaService: CaptchaService) {
 
@@ -29,11 +34,28 @@ export class AppComponent implements OnInit {
     );
   }
   checkResponse(response) {
+    console.log(response);
     if (this.captcha === response) {
-      return true;
+      this.success = true;
     } else {
       this.getCaptcha();
     }
   }
+
+showBlock(event) {
+  this.show = !this.show;
+  console.log(event);
+  this.num1 = event['offsetX'] % 3;
+  this.num2 = event['offsetY'] % 3;
+}
+
+checkResponseMath(response) {
+  console.log(response);
+  if (this.num1 + this.num2 === response) {
+    this.success = true;
+  } else {
+    this.getCaptcha();
+  }
+}
 
 }

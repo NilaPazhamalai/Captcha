@@ -4,25 +4,30 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <!-- <ul>
-    <li>
-      <label>age</label>
-      <input type="text">
-    </li>
-    <li>
-      
-    </li>
-    <li>
-      
-    </li>
-  </ul> -->
-  
-  <div id="captchaDiv" class='medium'>
-    {{captcha}}
+  <button type="button" (click)="showBlock($event)">
+    <span *ngIf="show">Hide Captcha</span>
+    <span *ngIf="!show">Show Captcha</span>
+  </button>
+
+  <div *ngIf="show" style="text-align:center" class="captchaBlock">
+    <div id="captchaDiv" class='medium'>
+      {{captcha}}
+    </div>
+    <p>Enter your response below: </p>
+    <input type="text" #response>
+    <button type="button" (click)="checkResponse(response.value)">Submit</button>
+    <p *ngIf="success">Success!!</p>
+
   </div>
-</div>
-Enter your response below:
-<input type="text" #response>
-<button type="button" (click)="checkResponse(response.value)">Submit</button>
 
 
+  <div *ngIf="show" style="text-align:center" class="captchaBlockMath">
+    <div id="captchaDiv" >
+      Solve the problem {{num1}} + {{num2}}
+    </div>
+    <p>Enter your response below: </p>
+    <input type="text" #response>
+    <button type="button" (click)="checkResponseMath(response.value)">Submit</button>
+    <p *ngIf="success">Success!!</p>
+
+  </div>

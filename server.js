@@ -1,4 +1,4 @@
-import { CaptchaRequest } from "./src/app/model/captchaRequest";
+//import { CaptchaRequest } from "./src/app/model/captchaRequest";
 
 var express = require("express");
 // var app = express();

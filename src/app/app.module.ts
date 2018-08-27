@@ -6,11 +6,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MathLogicModelComponent } from './captchaModel/math-logic-model/math-logic-model.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MathLogicModelComponent
   ],
   imports: [
     BrowserModule,
