@@ -1,0 +1,137 @@
+<!-- Begin inline CSS -->
+<style type="text/css">
+    .triangle {
+        height: 0px;
+        width: 0px;
+        /* border-top: 60px solid transparent; */
+        border-bottom: 60px black solid;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+    }
+
+    .textInTriangle {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 20px;
+        right: 15px;
+    }
+
+    .circle {
+        height: 60px;
+        width: 60px;
+        border-radius: 60px;
+        background: red;
+    }
+
+    .textInCircle {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+
+    .square {
+        height: 60px;
+        width: 60px;
+        background: green;
+    }
+
+    .textInSquare {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+
+    .rectangle {
+        height: 60px;
+        width: 100px;
+        background: blue;
+    }
+
+    .textInRectangle {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 30px;
+    }
+
+    .trapezoid {
+        height: 0px;
+        width: 100px;
+        border-bottom: 60px black solid;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+    }
+
+    .textInTrapezoid {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 30px;
+    }
+
+    .captchaFlexContainer {
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black;
+        width: 500px;
+    }
+
+    .captchaHolder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .captchaHolder div {
+        margin: 20px;
+    }
+</style>
+
+<html>
+
+
+<div class="captchaHolder">
+
+    <div class="captchaQuestion">
+        Click on the shape {{circle}} with text containing {{af}}
+    </div>
+    <div class="captchaFlexContainer">
+        <div class="triangle">
+            <span class="textInTriangle">
+                23
+            </span>
+        </div>
+
+        <div class="circle">
+            <span class="textInCircle">
+                af
+            </span>
+        </div>
+
+        <div class="square">
+            <span class="textInSquare">
+                34
+            </span>
+        </div>
+        <div class="rectangle">
+            <span class="textInRectangle">
+                98
+            </span>
+        </div>
+    </div>
+
+</div>
+
+</html>

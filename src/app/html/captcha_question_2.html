@@ -1,0 +1,133 @@
+<!-- Begin inline CSS -->
+<style type="text/css">
+    .triangle {
+        height: 0px;
+        width: 0px;
+        /* border-top: 60px solid transparent; */
+        border-bottom: 80px black solid;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+    }
+
+    .textInTriangle {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 25px;
+        right: 25px;
+        letter-spacing: 3px;
+    }
+
+    .circle {
+        height: 80px;
+        width: 80px;
+        border-radius: 80px;
+        background: red;
+    }
+
+    .textInCircle {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 25px;
+        left: 15px;
+        letter-spacing: 3px;
+    }
+
+    .square {
+        height: 60px;
+        width: 60px;
+        background: green;
+    }
+
+    .textInSquare {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+
+    .rectangle {
+        height: 60px;
+        width: 100px;
+        background: blue;
+    }
+
+    .textInRectangle {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 30px;
+    }
+
+    .trapezoid {
+        height: 0px;
+        width: 100px;
+        border-bottom: 60px black solid;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+    }
+
+    .textInTrapezoid {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 15px;
+        left: 30px;
+        
+    }
+
+    .captchaFlexContainer {
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black;
+        width: 400px;
+    }
+
+    .captchaHolder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .captchaHolder div {
+        margin: 2px;
+    }
+</style>
+
+<html>
+
+
+<div class="captchaHolder">
+    <div class="captchaFlexContainer">
+        <div class="triangle">
+            <span class="textInTriangle">
+                erf9
+            </span>
+        </div>
+
+        <div class="circle">
+            <span class="textInCircle">
+                985s
+            </span>
+        </div>
+    </div>
+    <div class="captchaQuestion">
+        Type the text in the shape {{triangle}}
+    </div>
+    <div class="submission">
+        <input type="text">
+        <button>Submit</button>
+        <button>Refresh</button>
+    </div>
+
+</div>
+
+</html>
